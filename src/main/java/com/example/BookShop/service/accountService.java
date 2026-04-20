@@ -19,4 +19,6 @@ public interface accountService {
 
     ClientAccountData updateAccountClient(ClientAccountData clientAccountData);
 
+    ClientAccountData saveClient();
+
 }

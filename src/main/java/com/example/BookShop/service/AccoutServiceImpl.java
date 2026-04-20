@@ -30,4 +30,9 @@ public class AccoutServiceImpl implements accountService{
     public ClientAccountData updateAccountClient(ClientAccountData clientAccountData) {
         return null;
     }
+
+    @Override
+    public ClientAccountData saveClient() {
+        return null;
+    }
 }
