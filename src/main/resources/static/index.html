@@ -6,10 +6,254 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        /* Сброс стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Features / Categories */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Hello World
-    </h1>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">📚 BookShop</a>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#categories">Категории</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Найди свою следующую историю</h1>
+        <p>Тысячи книг от лучших авторов мира с доставкой на дом.</p>
+        <a href="#categories" class="btn">Смотреть каталог</a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section id="categories" class="section">
+    <div class="container">
+        <h2 class="section-title">Популярные категории</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🚀 Фантастика</h3>
+                <p>Погрузись в миры будущего и далеких галактик.</p>
+            </div>
+            <div class="card">
+                <h3>🕵️ Детективы</h3>
+                <p>Запутанные сюжеты и неожиданные развязки.</p>
+            </div>
+            <div class="card">
+                <h3>💼 Бизнес</h3>
+                <p>Книги для развития карьеры и мышления.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Искусство</h3>
+                <p>Альбомы и книги о великих мастерах.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section" style="background-color: white;">
+    <div class="container">
+        <h2 class="section-title">Почему выбирают нас?</h2>
+        <div class="grid">
+            <div class="card" style="box-shadow: none;">
+                <h3>⚡ Быстрая доставка</h3>
+                <p>Доставляем заказы в течение 24 часов по городу.</p>
+            </div>
+            <div class="card" style="box-shadow: none;">
+                <h3>💰 Лучшие цены</h3>
+                <p>Регулярные скидки и программа лояльности.</p>
+            </div>
+            <div class="card" style="box-shadow: none;">
+                <h3>🛡️ Гарантия качества</h3>
+                <p>Только оригинальные издания от проверенных поставщиков.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <p>&copy; 2026 BookShop. Все права защищены.</p>
+        <p>Email: support@bookshop.com | Tel: +7 (999) 000-00-00</p>
+    </div>
+</footer>
+
 </body>
 </html>
