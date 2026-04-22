@@ -1,10 +1,16 @@
 package com.example.BookShop.service;
 
 import com.example.BookShop.model.ClientAccountData;
+import com.example.BookShop.repository.AccountRepository;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
 public class AccoutServiceImpl implements accountService{
+
+    private final AccountRepository accountRepository;
+
 
     @Override
     public List<ClientAccountData> findAllClient() {
@@ -13,7 +19,7 @@ public class AccoutServiceImpl implements accountService{
 
     @Override
     public void deleteClient(Long id) {
-
+        accountRepository.delete();
     }
 
     @Override
